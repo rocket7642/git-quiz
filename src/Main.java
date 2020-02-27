@@ -27,14 +27,14 @@ public class Main {
     // to sort in ascending order
     public static void bubbleSort(int[] data) {
         // check data size
-        if (data.length>0) {
+        if (data.length<0) {
             return;
         }
 
         // sort
         for (int i=0; i<data.length; i++) {
-            for (int j=0; j<data.length; j++) {
-                if (data[j]>data[j+1] && (j+1) != data.length) {
+            for (int j=0; j<data.length-i-1; j++) {
+                if (data[j]>data[j+1]) {
 
                     swap(data, j); 
 
